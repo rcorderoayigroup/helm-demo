@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
-        replicas: 5
+        replicas: 2
         image: nginx:1.25
   destination:
     server: https://kubernetes.default.svc
