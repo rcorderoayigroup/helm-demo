@@ -1,19 +1,6 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: helm-demo
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/rcorderoayigroup/helm-demo.git
-    path: .
-    targetRevision: HEAD
-    helm:
-      values: |
-        replicas: 5
-        image: nginx:1.25
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: demo
-  syncPolicy:
-    automated: {}
+apiVersion: v2
+name: helm-demo
+description: A simple Helm chart for Kubernetes
+type: application
+version: 0.1.0
+appVersion: "1.0"
